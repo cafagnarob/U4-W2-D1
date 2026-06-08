@@ -15,18 +15,16 @@ public class Esercizio3 {
 
         while (flag) {
             try {
-                System.out.println("prelievo");
+                System.out.println("saldo:" + conto1.getSaldo());
+                System.out.println("Quato vuoi prelevare? ");
                 double valorePrelievo = scanner.nextDouble();
-                System.out.println("prelievo online");
-                System.out.println(conto1.getSaldo());
-                double valorePrelievoOnline = scanner.nextDouble();
                 conto1.preleva(valorePrelievo);
-                System.out.println(conto1.getSaldo());
-
-
-                System.out.println(contoOnLine1.getSaldo());
+                System.out.println("saldo attuale" + conto1.getSaldo());
+                System.out.println("prelievo online: quanto vuoi prelevare?");
+                System.out.println("saldo online" + contoOnLine1.getSaldo());
+                double valorePrelievoOnline = scanner.nextDouble();
                 contoOnLine1.preleva(valorePrelievoOnline);
-                System.out.println(contoOnLine1.getSaldo());
+                System.out.println("saldo online attuale" + contoOnLine1.getSaldo());
 
 
             } catch (BancaException e) {
