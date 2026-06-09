@@ -78,13 +78,13 @@ public class Esercizio2 {
                     } else {
                         double ratio = km / litri;
                         System.out.println(ratio + "km/L");
-                        flag = false;
+
                     }
                 }
 
 
             } catch (ValoreLitriNonValidoExeption e) {
-                System.out.println("Errore" + " " + e.getMessage());
+                System.out.println("ERRORE:" + " " + e.getMessage());
 
             } catch (RuntimeException e) {
                 System.out.println("inserisci un numero valido");

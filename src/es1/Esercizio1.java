@@ -40,18 +40,11 @@ public class Esercizio1 {
                 if (nuovaPosizione < 0 || nuovaPosizione > arrayDiNumeri.length) {
                     throw new PosizioneNonValidaExeption("la posizione" + nuovaPosizione + " non è valida");
 
+                } else if (nuovaPosizione == 0) {
+                    System.out.println("------CHIUSURA-------");
+                    flag = false;
                 } else {
-                    switch (nuovaPosizione) {
-                        case 1 -> arrayDiNumeri[0] = nuovoValore;
-                        case 2 -> arrayDiNumeri[1] = nuovoValore;
-                        case 3 -> arrayDiNumeri[2] = nuovoValore;
-                        case 4 -> arrayDiNumeri[3] = nuovoValore;
-                        case 5 -> arrayDiNumeri[4] = nuovoValore;
-                        case 0 -> {
-                            System.out.println("------CHIUSURA-------");
-                            flag = false;
-                        }
-                    }
+                    arrayDiNumeri[nuovaPosizione - 1] = nuovoValore;
 
                 }
 
@@ -61,10 +54,7 @@ public class Esercizio1 {
             } catch (Exception e) {
                 System.out.println("inserire un numero valido");
             }
-
-            ;
-
-
+            
             System.out.println("---- inserisci un nuovo numero------");
 
 
